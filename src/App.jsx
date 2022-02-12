@@ -38,6 +38,7 @@ useEffect(() => {
 
 /****** GOT Quotes API SETUP WITH AXIOS ******/
 const [got, setGot] = useState({})
+// gotUrl - Dont really need useState here but might use later
 const [gotUrl, setGotUrl] = useState('https://game-of-thrones-quotes.herokuapp.com/v1/random')
 
 

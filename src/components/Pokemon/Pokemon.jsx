@@ -6,7 +6,9 @@ export default function Pokemon({ pokemon }) {
     <h2 className='section-head'>Pokemon List</h2>
     <div className="pokemon-parent">
     {pokemon.map(poke => (
-        <div key={poke} className='pokemon-list'>{poke}</div>
+        <div key={poke} className='pokemon-list'>
+         <p>{poke}</p> 
+        </div>
     ))}
     </div>
     </div>
