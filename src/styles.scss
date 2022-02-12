@@ -11,6 +11,54 @@ $section-transition-property: all;
 $section-transition-duration: 500ms;
 $section-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+* {
+
+	justify-content: center;
+	text-align: center;
+}
+.section {
+	 .section-head {
+	color: darkslateblue;
+	text-shadow: 2px 2px 1px rgb(16, 16, 76);
+}
+}
+
+.btn {
+	border-radius: 5px;
+	width: 7rem;
+	height: 4rem;
+	box-shadow: 2px 2px 2px black;
+	font-weight: bold;
+	background-color: darkslateblue;
+	color: whitesmoke;
+	margin-top: 2rem;
+	text-shadow: 1px 1px 1px rgb(16, 16, 76);
+	cursor: pointer;
+}
+
+.btn:hover {
+	transform: scale(1.05);
+	transition: all 0.3 ease;
+}
+
+.section {
+
+
+
+	.pokemon-list { 
+		max-height: 66%;
+
+
+
+		font-size: .7rem;
+
+	}
+}
+
+
+
+
+
 // Component Styles
 //
 .#{$section-class} {
