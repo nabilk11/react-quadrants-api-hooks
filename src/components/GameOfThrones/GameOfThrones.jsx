@@ -6,7 +6,7 @@ export default function GameOfThrones({ got }) {
 
         <div>
           <h2>{got.sentence}</h2>
-
+          {got.character &&  <h2>By: {got.character.name}</h2> }
 
         </div>
         <div>
