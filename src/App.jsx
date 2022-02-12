@@ -37,7 +37,7 @@ async function callGameOfThrones() {
 		<div className="main">
 			<Pokemon  pokemon={pokemon}/> 
 			<GameOfThrones  got={got}/>
-			<ReactKawaii  />
+			<ReactKawaii got={got} pokemon={pokemon} />
 			<LoaderBtns callGameOfThrones={callGameOfThrones} callPokemon={callPokemon}/>
 
 
