@@ -12,25 +12,33 @@ function App() {
 // state for pokemon 
 const [pokemon, setPokemon] = useState([])
 // urlState
-const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon')
+const [pokemonUrl, setPokemonUrl] = useState('https://pokeapi.co/api/v2/pokemon')
 
 
 function callPokemon() { 
-	axios.get(currentUrl)
+	axios.get(pokemonUrl)
 	.then(res => {
 		setPokemon(res.data.results.map(poke => poke.name))
 	})
 }
 
+/****** GOT Quotes API SETUP WITH AXIOS ******/
+const [got, setGot] = useState({})
+const [gotUrl, setGotUrl] = useState('https://game-of-thrones-quotes.herokuapp.com/v1/random')
 
+
+async function callGameOfThrones() { 
+	setGot((await axios.get(gotUrl)).data)
+
+	}
 
 
 	return (
 		<div className="main">
 			<Pokemon  pokemon={pokemon}/> 
-			<GameOfThrones  />
+			<GameOfThrones  got={got}/>
 			<ReactKawaii  />
-			<LoaderBtns callPokemon={callPokemon}/>
+			<LoaderBtns callGameOfThrones={callGameOfThrones} callPokemon={callPokemon}/>
 
 
 		</div>
